@@ -1,0 +1,16 @@
+table.test {  
+	background-color : #A0A8B8; width : 100%
+	border-collapse: collapse;
+    border: 1px solid black;
+}
+tr {  background-color : #FFFFFF;}
+tr.H1 {  font-weight : bold;  text-decoration : none;  background-color : #f5f5f5;
+    border: 1px solid silver;
+}
+td.H1, th.H1{
+    border: 1px solid silver;
+	padding: 5px;
+}
+
+
+

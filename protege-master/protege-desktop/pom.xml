@@ -1,0 +1,238 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+	<parent>
+		<groupId>edu.stanford.protege</groupId>
+		<artifactId>protege-parent</artifactId>
+		<version>5.1.1-SNAPSHOT</version>
+		<relativePath>../</relativePath>
+	</parent>
+	
+	<!-- groupId and version are inherited from the parent -->	
+	<artifactId>protege-desktop</artifactId>
+	<packaging>jar</packaging>
+
+	<name>protege-desktop</name>
+	<description>Standard build of the Protege Desktop ontology editor.</description>
+
+	<properties>
+		<conf.mem.xmx>500</conf.mem.xmx>
+		<conf.mem.xms>200</conf.mem.xms>
+		<conf.mem.xss>16</conf.mem.xss>
+		<conf.extra.args>-XX:CompileCommand=exclude,javax/swing/text/GlyphView,getBreakSpot</conf.extra.args>
+		<osx.bundle.name>Protégé.app</osx.bundle.name>
+	</properties>
+
+	<repositories>
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<id>github</id>
+			<url>https://raw.github.com/protegeproject/mvn-repo/master/releases</url>
+		</repository>
+	</repositories>
+	
+	<dependencies>
+	
+		<!-- NOTE: These dependency declarations are required to sort this project to the end of the line in the multimodule build. -->
+		
+		<!-- edu.stanford.protege dependency list -->
+
+		<dependency>
+			<groupId>edu.stanford.protege</groupId>
+			<artifactId>protege-common</artifactId>
+			<version>${project.parent.version}</version>
+        </dependency>
+
+		<dependency>
+			<groupId>edu.stanford.protege</groupId>
+			<artifactId>protege-editor-core</artifactId>
+			<version>${project.parent.version}</version>
+        </dependency>
+
+        <dependency>
+			<groupId>edu.stanford.protege</groupId>
+			<artifactId>protege-editor-owl</artifactId>
+			<version>${project.parent.version}</version>
+        </dependency>
+
+        <dependency>
+			<groupId>edu.stanford.protege</groupId>
+			<artifactId>protege-launcher</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.equinox</groupId>
+			<artifactId>org.eclipse.equinox.supplement</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>edu.stanford.protege</groupId>
+			<artifactId>jre.os-x</artifactId>
+			<version>1.8.0_40</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>edu.stanford.protege</groupId>
+			<artifactId>jre.win</artifactId>
+			<version>1.8.0_40</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>edu.stanford.protege</groupId>
+			<artifactId>jre.linux</artifactId>
+			<version>1.8.0_40</version>
+			<scope>runtime</scope>
+		</dependency>
+
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>protege-desktop-assembly</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+						<configuration>
+							<finalName>protege-${project.version}</finalName>
+								<archiverConfig>
+								<defaultDirectoryMode>0755</defaultDirectoryMode>
+								<defaultFileMode>0755</defaultFileMode>
+							</archiverConfig>
+							<descriptors>
+								<descriptor>src/main/assembly/protege-platform-independent.xml</descriptor>
+							</descriptors>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>release</id>
+			<properties>
+				<win.dir>target/Protege-${project.version}-win/Protege-${project.version}</win.dir>
+			</properties>
+			<build>
+				<plugins>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-antrun-plugin</artifactId>
+						<version>1.8</version>
+						<executions>
+							<execution>
+								<phase>compile</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<target>
+										<mkdir dir="${win.dir}" />
+									</target>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>com.akathist.maven.plugins.launch4j</groupId>
+						<artifactId>launch4j-maven-plugin</artifactId>
+						<version>1.7.10</version>
+						<executions>
+							<execution>
+								<configuration>
+									<headerType>gui</headerType>
+									<outfile>target/Protege.exe</outfile>
+									<dontWrapJar>true</dontWrapJar>
+									<jar>bin/protege-launcher.jar</jar>
+									<errTitle>Protege</errTitle>
+									<icon>src/main/resources/app/Protege.ico</icon>
+									<stayAlive>true</stayAlive>
+									<chdir>.</chdir>
+									<classPath>
+										<mainClass>org.protege.osgi.framework.Launcher</mainClass>
+										<addDependencies>false</addDependencies>
+										<preCp>bundles/guava.jar;bundles/logback-classic.jar;bundles/logback-core.jar;bundles/slf4j-api.jar;bin/org.apache.felix.main.jar;bin/protege-launcher.jar</preCp>
+									</classPath>
+									<jre>
+										<path>jre</path>
+										<minVersion>1.8.0</minVersion>
+										<bundledJreAsFallback>false</bundledJreAsFallback>
+										<bundledJre64Bit>true</bundledJre64Bit>
+										<initialHeapSize>${conf.mem.xms}</initialHeapSize>
+										<maxHeapSize>${conf.mem.xmx}</maxHeapSize>
+										<opts>
+											<opt>-Xss${conf.mem.xss}M</opt>
+											<opt>-DentityExpansionLimit=100000000</opt>
+											<opt>-Dlogback.configurationFile=conf/logback-win.xml</opt>
+											<opt>-Dfile.encoding=utf-8</opt>
+										</opts>
+									</jre>
+									<versionInfo>
+										<fileVersion>5.0.0.0</fileVersion>
+										<txtFileVersion>Protégé ${project.version}</txtFileVersion>
+										<fileDescription>Protégé Ontology Editor</fileDescription>
+										<copyright>Stanford University</copyright>
+										<productVersion>5.0.0.0</productVersion>
+										<txtProductVersion>Protégé ${project.version}</txtProductVersion>
+										<productName>Protégé</productName>
+										<internalName>Protege</internalName>
+										<originalFilename>Protege.exe</originalFilename>
+									</versionInfo>
+								</configuration>
+								<phase>package</phase>
+								<goals>
+									<goal>launch4j</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+
+
+					<plugin>
+						<artifactId>maven-assembly-plugin</artifactId>
+						<version>2.4</version>
+						<executions>
+							<execution>
+								<id>protege-desktop-assembly</id>
+								<phase>package</phase>
+								<goals>
+									<goal>single</goal>
+								</goals>
+								<configuration>
+									<finalName>protege-${project.version}</finalName>
+									<archiverConfig>
+										<defaultDirectoryMode>0755</defaultDirectoryMode>
+										<defaultFileMode>0755</defaultFileMode>
+									</archiverConfig>
+									<descriptors>
+										<descriptor>src/main/assembly/protege-platform-independent.xml</descriptor>
+										<descriptor>src/main/assembly/protege-os-x.xml</descriptor>
+										<descriptor>src/main/assembly/protege-win.xml</descriptor>
+										<descriptor>src/main/assembly/protege-linux.xml</descriptor>
+									</descriptors>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+</project>
