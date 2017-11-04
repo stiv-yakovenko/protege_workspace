@@ -1,32 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="http://tigraworld.com/protege/simpleLoop.owl" uri="protege-editor-owl/target/test-classes/ontologies/tree/simpleLoop.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="http://tigraworld.com/protege/twoParents.owl" uri="protege-editor-owl/target/test-classes/ontologies/tree/twoParents.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="http://www.co-ode.org/ontologies/amino-acid/2009/02/16/amino-acid.owl" uri="protege-editor-owl/target/test-classes/ontologies/amino-acid.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="http://www.co-ode.org/ontologies/photography/photography.owl" uri="protege-editor-owl/target/test-classes/ontologies/photography.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="http://www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl" uri="protege-editor-owl/target/test-classes/ontologies/pizza.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="http://www.semanticweb.org/denis/ontologies/2016/3/untitled-ontology-100" uri="family-simple.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="http://www.semanticweb.org/denis/ontologies/2017/2/untitled-ontology-195" uri="example_for_ELK.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="http://www.semanticweb.org/denis/ontologies/2017/6/untitled-ontology-239" uri="interpolant_test.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="http://www.test.com/Ambiguous.owl" uri="protege-editor-owl/target/test-classes/ontologies/AmbiguousName.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="http://www.tigraworld.com/protege/VersionedOntology.owl" uri="protege-editor-owl/target/test-classes/ontologies/VersionedOntology.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="http://www.tigraworld.com/protege/determinant.owl" uri="protege-editor-owl/target/test-classes/ontologies/update/versioned.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="http://www.tigraworld.com/protege/twoEq.owl" uri="protege-editor-owl/target/test-classes/ontologies/tree/twoEq.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://tigraworld.com/protege/simpleLoop.owl" uri="protege-editor-owl/src/test/resources/ontologies/tree/simpleLoop.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://tigraworld.com/protege/twoParents.owl" uri="protege-editor-owl/src/test/resources/ontologies/tree/twoParents.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://www.co-ode.org/ontologies/amino-acid/2009/02/16/amino-acid.owl" uri="protege-editor-owl/src/test/resources/ontologies/amino-acid.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://www.co-ode.org/ontologies/photography/photography.owl" uri="protege-editor-owl/src/test/resources/ontologies/photography.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl" uri="protege-editor-owl/target/test-classes/ontologies/update/pizza-xml.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl" uri="protege-editor-owl/target/test-classes/ontologies/update/pizza.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl" uri="protege-editor-owl/src/test/resources/ontologies/pizza.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl" uri="protege-editor-owl/src/test/resources/ontologies/update/pizza-xml.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl" uri="protege-editor-owl/src/test/resources/ontologies/update/pizza.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://www.test.com/Ambiguous.owl" uri="protege-editor-owl/target/test-classes/ontologies/update/Ambiguous.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://www.test.com/Ambiguous.owl" uri="protege-editor-owl/src/test/resources/ontologies/AmbiguousName.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://www.test.com/Ambiguous.owl" uri="protege-editor-owl/src/test/resources/ontologies/update/Ambiguous.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://www.tigraworld.com/protege/VersionedOntology.owl" uri="protege-editor-owl/src/test/resources/ontologies/VersionedOntology.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://www.tigraworld.com/protege/determinant.owl" uri="protege-editor-owl/src/test/resources/ontologies/update/versioned.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1508159948798" name="shadowed:http://www.tigraworld.com/protege/twoEq.owl" uri="protege-editor-owl/src/test/resources/ontologies/tree/twoEq.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="http://tigraworld.com/protege/simpleLoop.owl" uri="protege-editor-owl/src/test/resources/ontologies/tree/simpleLoop.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="http://tigraworld.com/protege/twoParents.owl" uri="protege-editor-owl/src/test/resources/ontologies/tree/twoParents.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="http://www.co-ode.org/ontologies/amino-acid/2009/02/16/amino-acid.owl" uri="protege-editor-owl/src/test/resources/ontologies/amino-acid.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="http://www.co-ode.org/ontologies/photography/photography.owl" uri="protege-editor-owl/src/test/resources/ontologies/photography.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="http://www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl" uri="protege-editor-owl/src/test/resources/ontologies/pizza.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="http://www.semanticweb.org/denis/ontologies/2016/3/untitled-ontology-100" uri="family-simple.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="http://www.semanticweb.org/denis/ontologies/2017/2/untitled-ontology-195" uri="example_for_ELK.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="duplicate:http://www.semanticweb.org/denis/ontologies/2017/6/untitled-ontology-239" uri="interpolant_test.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="duplicate:http://www.semanticweb.org/denis/ontologies/2017/6/untitled-ontology-239" uri="interpolant_test2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="duplicate:http://www.semanticweb.org/denis/ontologies/2017/6/untitled-ontology-239" uri="ont.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="http://www.test.com/Ambiguous.owl" uri="protege-editor-owl/src/test/resources/ontologies/AmbiguousName.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="http://www.tigraworld.com/protege/VersionedOntology.owl" uri="protege-editor-owl/src/test/resources/ontologies/VersionedOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="http://www.tigraworld.com/protege/determinant.owl" uri="protege-editor-owl/src/test/resources/ontologies/update/versioned.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="http://www.tigraworld.com/protege/twoEq.owl" uri="protege-editor-owl/src/test/resources/ontologies/tree/twoEq.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://tigraworld.com/protege/simpleLoop.owl" uri="protege-editor-owl/target/test-classes/ontologies/tree/simpleLoop.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://tigraworld.com/protege/twoParents.owl" uri="protege-editor-owl/target/test-classes/ontologies/tree/twoParents.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://www.co-ode.org/ontologies/amino-acid/2009/02/16/amino-acid.owl" uri="protege-editor-owl/target/test-classes/ontologies/amino-acid.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://www.co-ode.org/ontologies/photography/photography.owl" uri="protege-editor-owl/target/test-classes/ontologies/photography.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl" uri="protege-editor-owl/src/test/resources/ontologies/update/pizza-xml.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl" uri="protege-editor-owl/src/test/resources/ontologies/update/pizza.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl" uri="protege-editor-owl/target/test-classes/ontologies/pizza.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl" uri="protege-editor-owl/target/test-classes/ontologies/update/pizza-xml.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://www.co-ode.org/ontologies/pizza/2005/10/18/pizza.owl" uri="protege-editor-owl/target/test-classes/ontologies/update/pizza.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://www.test.com/Ambiguous.owl" uri="protege-editor-owl/src/test/resources/ontologies/update/Ambiguous.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://www.test.com/Ambiguous.owl" uri="protege-editor-owl/target/test-classes/ontologies/AmbiguousName.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://www.test.com/Ambiguous.owl" uri="protege-editor-owl/target/test-classes/ontologies/update/Ambiguous.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://www.tigraworld.com/protege/VersionedOntology.owl" uri="protege-editor-owl/target/test-classes/ontologies/VersionedOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://www.tigraworld.com/protege/determinant.owl" uri="protege-editor-owl/target/test-classes/ontologies/update/versioned.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1509609347390" name="shadowed:http://www.tigraworld.com/protege/twoEq.owl" uri="protege-editor-owl/target/test-classes/ontologies/tree/twoEq.owl"/>
     </group>
 </catalog>
